@@ -46,7 +46,7 @@ public class DriveTrain extends Subsystem {
 	private double _lastAccer = 0;
 
 	public void initDefaultCommand() {
-        // Set the default command for a subsystem here.
+        // Set the default command for a subsystem here. 
 	}
     public DriveTrain() {
     	enc.setDistancePerPulse((Math.PI*6)/(20*10.71));
