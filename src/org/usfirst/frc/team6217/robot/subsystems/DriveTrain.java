@@ -24,15 +24,15 @@ public class DriveTrain extends Subsystem {
 	private double lastSpeedOfX = 0;
 	private double lastSpeedOfZ = 0;
 	
-	private WPI_VictorSPX _SPX_Left1 = new WPI_VictorSPX(RobotMap.VICTOR_SPX_DRIVE_LEFT1);
-	private WPI_VictorSPX _SPX_Left2 = new WPI_VictorSPX(RobotMap.VICTOR_SPX_DRIVE_LEFT2);
-	private WPI_VictorSPX _SPX_Right1 = new WPI_VictorSPX(RobotMap.VICTOR_SPX_DRIVE_RIGHT1);
-	private WPI_VictorSPX _SPX_Right2 = new WPI_VictorSPX(RobotMap.VICTOR_SPX_DRIVE_RIGHT2);
+//	private WPI_VictorSPX _SPX_Left1 = new WPI_VictorSPX(RobotMap.VICTOR_SPX_DRIVE_LEFT1);
+//	private WPI_VictorSPX _SPX_Left2 = new WPI_VictorSPX(RobotMap.VICTOR_SPX_DRIVE_LEFT2);
+//	private WPI_VictorSPX _SPX_Right1 = new WPI_VictorSPX(RobotMap.VICTOR_SPX_DRIVE_RIGHT1);
+//	private WPI_VictorSPX _SPX_Right2 = new WPI_VictorSPX(RobotMap.VICTOR_SPX_DRIVE_RIGHT2);
 
-//	private VictorSP _SPX_Left1 = new VictorSP(0);
-//	private VictorSP _SPX_Left2 = new VictorSP(1);
-//	private VictorSP _SPX_Right1 = new VictorSP(2);
-//	private VictorSP _SPX_Right2 = new VictorSP(3);
+	private VictorSP _SPX_Left1 = new VictorSP(0);
+	private VictorSP _SPX_Left2 = new VictorSP(1);
+	private VictorSP _SPX_Right1 = new VictorSP(2);
+	private VictorSP _SPX_Right2 = new VictorSP(3);
 
 	private SpeedControllerGroup _leftSide = new SpeedControllerGroup(_SPX_Left1,_SPX_Left2);
 	private SpeedControllerGroup _rightSide = new SpeedControllerGroup(_SPX_Right1, _SPX_Right2);
@@ -41,7 +41,7 @@ public class DriveTrain extends Subsystem {
 	private ADXRS450_Gyro _gyro = new ADXRS450_Gyro();
 	private Accelerometer _accel = new BuiltInAccelerometer(Accelerometer.Range.k4G);
 	private Encoder enc = new Encoder(0, 1, false, Encoder.EncodingType.k4X);
-	
+
 	private double _accer = 0;
 	private double _lastAccer = 0;
 
@@ -49,7 +49,7 @@ public class DriveTrain extends Subsystem {
         // Set the default command for a subsystem here.
 	}
     public DriveTrain() {
-    	enc.setDistancePerPulse(0.0211600227);
+    	enc.setDistancePerPulse((Math.PI*6)/(20*10.71));
     }
 	public boolean signbit(double xSignbit) {
 		if (xSignbit >= 0) {
@@ -75,7 +75,8 @@ public class DriveTrain extends Subsystem {
 	}
 	
 	public double getEncoderValue() {
-		return enc.get();
+		System.out.println(enc.getRaw());
+		return enc.getDistance();
 	}
 	
 	public void resetEncoder() {

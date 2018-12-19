@@ -21,13 +21,13 @@ public class Drive10ft extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.driveTrain.tankDrive(0.5, 0.5);
+    	Robot.driveTrain.tankDrive(-0.5, 0.5);
     	
     }
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-    	return Robot.driveTrain.getEncoderValue() > 10;    
+    	return Robot.driveTrain.getEncoderValue() > 12;    
     }
 
     // Called once after isFinished returns true
