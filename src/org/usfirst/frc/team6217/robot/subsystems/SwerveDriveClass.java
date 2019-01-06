@@ -1,8 +1,9 @@
 package org.usfirst.frc.team6217.robot.subsystems;
 
-
+//defining the class SwerveDrive;
 public class SwerveDriveClass {
-	//kyle says comment
+	
+	//creating constants for the width and length;
 	public final double L = LENGTH;
 	public final double W = WIDTH;
 	
@@ -10,7 +11,8 @@ public class SwerveDriveClass {
 	private WheelDrive backLeft;
 	private WheelDrive frontRight;
 	private WheelDrive frontLeft;
-
+	
+	//creating a constructor called SwerveDriveClass defining its parameters;
 	public SwerveDriveClass (WheelDrive backRight, WheelDrive backLeft, WheelDrive frontRight, WheelDrive frontLeft) {
 	    this.backRight = backRight;
 	    this.backLeft = backLeft;
