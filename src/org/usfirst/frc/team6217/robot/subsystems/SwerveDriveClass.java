@@ -4,8 +4,8 @@ package org.usfirst.frc.team6217.robot.subsystems;
 public class SwerveDriveClass {
 	
 	//creating constants for the width and length;
-	public final double L = LENGTH;
-	public final double W = WIDTH;
+	public final double L = 20.5;
+	public final double W = 14;
 	
 	private WheelDrive backRight;
 	private WheelDrive backLeft;
