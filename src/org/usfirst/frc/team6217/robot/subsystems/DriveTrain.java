@@ -40,7 +40,7 @@ public class DriveTrain extends Subsystem {
 	
 	private ADXRS450_Gyro _gyro = new ADXRS450_Gyro();
 	private Accelerometer _accel = new BuiltInAccelerometer(Accelerometer.Range.k4G);
-	private Encoder enc = new Encoder(0, 1, false, Encoder.EncodingType.k4X);
+	private Encoder enc = new Encoder(0, 1, true, Encoder.EncodingType.k4X);
 
 	private double _accer = 0;
 	private double _lastAccer = 0;
