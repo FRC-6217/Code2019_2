@@ -29,6 +29,8 @@ public class SwerveDriveClass {
 
 		//The next thing we do is assign the value a to the equation. a makes the robot go backwards
 		//Note: The L/r part makes the code in radians not degrees
+		
+		//a makes it go backwards;
 		double a = x - z * (L / r);
 		//b makes it go forwards.
 		double b = x + z * (L / r);
