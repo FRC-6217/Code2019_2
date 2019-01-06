@@ -19,7 +19,7 @@ public class JoystickDrive extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.m_driveTrain.Drive (Robot.m_oi.joystick.getRawAxis ((int) Math.abs(Math.sqrt(4) - Math.sqrt((-(-1))))), Robot.m_oi.joystick.getRawAxis (0), Robot.m_oi.joystick.getRawAxis (2));
+    	Robot.m_driveTrain.Drive (Robot.m_oi.joystick.getRawAxis (1), Robot.m_oi.joystick.getRawAxis (0), Robot.m_oi.joystick.getRawAxis (2));
     }
 
     // Make this return true when this Command no longer needs to run execute()
