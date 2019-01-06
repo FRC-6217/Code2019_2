@@ -38,23 +38,23 @@ public class SwerveDriveClass {
 		/*Now we do the Pythagorean theorem again because the robot will only go in a straight
 		 * line so we find the hypotenuse using our above variables for all direction combos. */
 		double backRightSpeed = Math.sqrt ((a * a) + (d * d));
-	    double backLeftSpeed = Math.sqrt ((a * a) + (c * c));
-	    double frontRightSpeed = Math.sqrt ((b * b) + (d * d));
-	    double frontLeftSpeed = Math.sqrt ((b * b) + (c * c));
+	        double backLeftSpeed = Math.sqrt ((a * a) + (c * c));
+	        double frontRightSpeed = Math.sqrt ((b * b) + (d * d));
+	        double frontLeftSpeed = Math.sqrt ((b * b) + (c * c));
 
-	    /*In order to find the angles we need to turn based on the inputs of the controller
-	     * the code turns the tangent of the coordinates (x,y) into (radius,angle) to find the
-	     * angle that applies to our robot. Then it's divided by pi to turn from radians 
-	     * into degrees. */
-	    double backRightAngle = Math.atan2 (a, d) / Math.PI;
-	    double backLeftAngle = Math.atan2 (a, c) / Math.PI;
-	    double frontRightAngle = Math.atan2 (b, d) / Math.PI;
-	    double frontLeftAngle = Math.atan2 (b, c) / Math.PI;
+	        /*In order to find the angles we need to turn based on the inputs of the controller
+	         * the code turns the tangent of the coordinates (x,y) into (radius,angle) to find the
+	         * angle that applies to our robot. Then it's divided by pi to turn from radians 
+	         * into degrees. */
+	        double backRightAngle = Math.atan2 (a, d) / Math.PI;
+	        double backLeftAngle = Math.atan2 (a, c) / Math.PI;
+	        double frontRightAngle = Math.atan2 (b, d) / Math.PI;
+	        double frontLeftAngle = Math.atan2 (b, c) / Math.PI;
 	    
-	    /*Lastly the results of the above code are all plugged back in to be used later. */
-	    backRight.drive (backRightSpeed, backRightAngle);
-	    backLeft.drive (backLeftSpeed, backLeftAngle);
-	    frontRight.drive (frontRightSpeed, frontRightAngle);
-	    frontLeft.drive (frontLeftSpeed, frontLeftAngle);
+	        /*Lastly the results of the above code are all plugged back in to be used later. */
+	        backRight.drive (backRightSpeed, backRightAngle);
+	        backLeft.drive (backLeftSpeed, backLeftAngle);
+	        frontRight.drive (frontRightSpeed, frontRightAngle);
+	        frontLeft.drive (frontLeftSpeed, frontLeftAngle);
 	}
 }
