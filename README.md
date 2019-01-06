@@ -1,3 +1,3 @@
 you should read me
 
-*HA <SPACE> HA <SPACE> HA
+HA <SPACE> HA <SPACE> HA
