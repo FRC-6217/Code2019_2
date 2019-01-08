@@ -2,6 +2,7 @@ package org.usfirst.frc.team6217.robot.subsystems;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.can.VictorSPX;
+
 import edu.wpi.first.wpilibj.PIDOutput;
 
 /* Wrapper class for VictorSPX and PIDOutpt class;
