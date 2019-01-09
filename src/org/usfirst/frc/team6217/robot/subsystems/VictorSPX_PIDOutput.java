@@ -13,8 +13,8 @@ import edu.wpi.first.wpilibj.PIDOutput;
 public class VictorSPX_PIDOutput implements PIDOutput {
 	private VictorSPX motor;
 	
-	public VictorSPX_PIDOutput(VictorSPX motor) {
-		this.motor = motor;
+	public VictorSPX_PIDOutput(VictorSPX motorI) {
+		this.motor = motorI;
 	}
 	
 	public void pidWrite(double output) {

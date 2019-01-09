@@ -24,6 +24,7 @@ public class WheelDrive {
 	    //VictorSPX is not a subclass of PIDOutput;
 	    pidController = new PIDController (1, 0, 0, enc, this.motorPID);
 
+	    pidController.setInputRange(-1, 1);
 	    pidController.setOutputRange (-1, 1);
 	    pidController.setContinuous ();
 	    pidController.enable ();
