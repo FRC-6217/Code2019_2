@@ -5,10 +5,10 @@ import org.usfirst.frc.team6217.robot.commands.JoystickDrive;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 public class DriveTrain extends Subsystem {
-	private WheelDrive backRight = new WheelDrive (47, 44, 0);
-	private WheelDrive backLeft = new WheelDrive (42, 41, 2);
-	private WheelDrive frontRight = new WheelDrive (45, 46, 4);
-	private WheelDrive frontLeft = new WheelDrive (40, 43, 6);
+	private WheelDrive backRight = new WheelDrive (47, 44, 0, false);
+	private WheelDrive backLeft = new WheelDrive (42, 41, 2, true);
+	private WheelDrive frontRight = new WheelDrive (45, 46, 4, false);
+	private WheelDrive frontLeft = new WheelDrive (40, 43, 6, true);
 
 	private SwerveDriveClass swerveDrive = new SwerveDriveClass (backRight, backLeft, frontRight, frontLeft);
 
