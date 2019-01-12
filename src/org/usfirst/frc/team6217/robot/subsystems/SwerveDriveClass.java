@@ -4,8 +4,8 @@ package org.usfirst.frc.team6217.robot.subsystems;
 public class SwerveDriveClass {
 	
 	//creating constants for the width and length;
-	public final double L = 14;
-	public final double W = 20.5;
+	public final double L = 20.5;
+	public final double W = 14;
 	
 	private WheelDrive backRight;
 	private WheelDrive backLeft;
@@ -56,9 +56,9 @@ public class SwerveDriveClass {
 	        double frontLeftAngle = Math.atan2 (b, c) / Math.PI;
 	    
 	        /*Lastly the results of the above code are all plugged back in to be used later. */
-	        backRight.drive (backRightSpeed, backRightAngle, false);
-	        backLeft.drive (backLeftSpeed, backLeftAngle, true);
-	        frontRight.drive (frontRightSpeed, frontRightAngle, false);
-	        frontLeft.drive (frontLeftSpeed, frontLeftAngle, true);
+	        backRight.drive (backRightSpeed, backRightAngle - 4.360, false);
+	        backLeft.drive (backLeftSpeed, backLeftAngle - 1.255, true);
+	        frontRight.drive (frontRightSpeed, frontRightAngle - 0.493, false);
+	        frontLeft.drive (frontLeftSpeed, frontLeftAngle - 3.250, true);
 	}
 }
